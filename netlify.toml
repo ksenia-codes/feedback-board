@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { NODE_VERSION = "18" }
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # Netlify will auto-detect functions if you use Netlify Functions.
+  # If you use Netlify Edge Functions or special routing, configure here.
