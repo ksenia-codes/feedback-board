@@ -38,25 +38,25 @@ export default function FeedbackForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
+    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Your name (optional)"
-        className="w-full rounded-md border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 text-black"
+        className="w-full rounded-md border border-slate-200 px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-indigo-200 text-black text-sm sm:text-base"
       />
       <textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Your feedback"
         rows={4}
-        className="w-full rounded-md border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 text-black"
+        className="w-full rounded-md border border-slate-200 px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-indigo-200 text-black text-sm sm:text-base"
       />
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 disabled:opacity-50"
+          className="inline-flex items-center gap-2 rounded-md bg-indigo-600 px-3 py-2 sm:px-4 sm:py-2 text-white hover:bg-indigo-700 disabled:opacity-50 text-sm sm:text-base whitespace-nowrap transition-colors"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path
@@ -78,12 +78,12 @@ export default function FeedbackForm() {
         </button>
 
         {status === "ok" && (
-          <span className="text-sm text-green-600">
+          <span className="text-xs sm:text-sm text-green-600">
             Thanks — your shout-out is pending approval.
           </span>
         )}
         {status === "error" && (
-          <span className="text-sm text-red-600">Please enter a message.</span>
+          <span className="text-xs sm:text-sm text-red-600">Please enter a message.</span>
         )}
       </div>
     </form>
