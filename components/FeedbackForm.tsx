@@ -79,7 +79,7 @@ export default function FeedbackForm() {
 
         {status === "ok" && (
           <span className="text-xs sm:text-sm text-green-600">
-            Thanks — your shout-out is pending approval.
+            Thanks — your shout-out has been submitted for approval.
           </span>
         )}
         {status === "error" && (

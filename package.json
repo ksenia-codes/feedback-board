@@ -7,11 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write .",
-    "drizzle:generate": "drizzle-kit generate:pg --out ./drizzle",
-    "drizzle:push": "drizzle-kit push:pg",
-    "migrate:dev": "drizzle-kit migrate:dev",
-    "migrate:deploy": "drizzle-kit migrate:deploy"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
