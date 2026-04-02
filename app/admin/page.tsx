@@ -25,6 +25,7 @@ export default function AdminPage() {
       if (!response.ok) throw new Error("Failed to fetch shoutouts");
       const data = await response.json();
       setShoutouts(data);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -46,6 +47,7 @@ export default function AdminPage() {
       setShoutouts(
         shoutouts.map((s) => (s.id === id ? { ...s, approved } : s)),
       );
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.message);
     }

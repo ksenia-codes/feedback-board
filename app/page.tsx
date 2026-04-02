@@ -6,7 +6,6 @@ export default async function Page() {
   const { data: shoutouts } = await supabase
     .from("shoutouts")
     .select("*")
-    // .eq("approved", true)
     .order("created_at", { ascending: false });
 
   return (
