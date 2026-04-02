@@ -21,7 +21,9 @@ export default async function Page() {
       </section>
 
       <section>
-        <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-black">Recent Shout-outs</h3>
+        <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-black">
+          Recent Shout-outs
+        </h3>
         <div className="grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {shoutouts &&
             shoutouts.map((s) => <FeedbackCard key={s.id} shoutout={s} />)}
